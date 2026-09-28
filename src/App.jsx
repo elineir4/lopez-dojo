@@ -658,18 +658,24 @@ function App() {
 
 function Mapa() {
   return (
-    <div className="map">
+    <a
+      className="map map-link"
+      href="https://maps.google.com/?q=Av.+Goycoechea+249,+Villa+Allende"
+      target="_blank"
+      rel="noreferrer"
+      aria-label="Abrir la ubicacion de Lopez Dojo en Google Maps"
+    >
       <div className="map-art">
         <span>VILLA ALLENDE</span>
         <i><Icono nombre="ubicacion" /></i>
       </div>
       <div>
         <small>COORDENADAS DEL TATAMI<br /><b>Av. Goycoechea 249, Villa Allende</b></small>
-        <a href="https://maps.google.com/?q=Av.+Goycoechea+249,+Villa+Allende" target="_blank" rel="noreferrer">
+        <span className="map-action">
           ABRIR EN MAPS <Icono nombre="externo" />
-        </a>
+        </span>
       </div>
-    </div>
+    </a>
   )
 }
 
