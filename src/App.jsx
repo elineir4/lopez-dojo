@@ -9,7 +9,7 @@ import fotoMma from './assets/mmadojo.jpg'
 import fotoJulieta from './assets/julietadominguini.jpeg'
 import fotoPaula from './assets/paulycalderon.jpeg'
 import fotoSantiago from './assets/santiagozapata.jpeg'
-import fotoLeandro from './assets/leandrosensei.jpeg'
+import fotoLeandro from './assets/leandrosensei2.jpeg'
 
 // Enlaces y funciones que usamos en distintas partes de la página.
 const enlaceWhatsApp = 'https://wa.me/5493513122622?text=Hola%20Lopez%20Dojo%2C%20quiero%20reservar%20una%20clase%20de%20prueba.'
@@ -58,7 +58,7 @@ const disciplinas = [
 // Equipo docente del programa infantil.
 const docentes = [
   {
-    nombre: 'JULIETA DOMINGUINI',
+    nombre: 'JULIETA DOMINIGHINI',
     especialidad: 'Jiu-Jitsu Niños',
     etiqueta: 'ESPECIALIDAD INFANTIL',
     codigo: 'DOJO KIDS BJJ',
@@ -102,7 +102,7 @@ const horariosAdultos = [
   {
     hora: '21:30 — 22:30',
     disciplina: 'JIU-JITSU',
-    descripcion: 'Brazilian Jiu-Jitsu técnico y randori',
+    descripcion: 'Brazilian Jiu-Jitsu técnico',
     publico: 'ADULTOS',
     color: 'blue',
   },
@@ -133,7 +133,7 @@ const gruposAdultos = [
     clases: [
       { hora: '19:30 — 20:30', disciplina: 'KICKBOXING / BOXEO', descripcion: 'Striking técnico y combate de pie', publico: 'ADULTOS', color: 'blue' },
       { hora: '20:30 — 21:30', disciplina: 'KICKBOXING / MMA', descripcion: 'Transición de striking a suelo y jaula', publico: 'ADULTOS', color: 'purple' },
-      { hora: '21:30 — 22:30', disciplina: 'JIU-JITSU', descripcion: 'Jiu-Jitsu técnico y randori', publico: 'ADULTOS', color: 'blue' },
+      { hora: '21:30 — 22:30', disciplina: 'JIU-JITSU', descripcion: 'Jiu-Jitsu técnico', publico: 'ADULTOS', color: 'blue' },
     ],
   },
   {
@@ -473,7 +473,7 @@ function App() {
                   estándares de excelencia en cada sesión sobre el tatami.
                 </p>
                 <div className="chips">
-                  <span>BJJ ADULTOS &amp; RANDORI</span>
+                  <span>BJJ ADULTOS</span>
                   <span>KARATE-DO TRADICIONAL</span>
                   <span>KICKBOXING TÉCNICO</span>
                   <span>MMA PROFESIONAL &amp; AMATEURS</span>
