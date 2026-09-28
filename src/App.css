@@ -929,7 +929,8 @@ body { overflow-x: hidden; }
 .discipline:nth-child(3), .person:nth-child(3) { animation-delay: .16s; }
 .discipline:nth-child(4) { animation-delay: .24s; }
 .discipline { transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
-.discipline:hover { transform: translateY(-5px); box-shadow: 0 12px 28px #00000080; }
+.discipline:hover,
+.discipline:focus-within { transform: translateY(-6px) scale(1.06); box-shadow: 0 15px 32px #00000099; }
 .logo-dojo { transition: transform .3s ease; }
 .brand:hover .logo-dojo { transform: scale(1.06); }
 
@@ -952,4 +953,107 @@ body { overflow-x: hidden; }
   .enrollment-layout { grid-template-columns: 1fr; }
   .enrollment-options { grid-template-columns: 1fr; }
   .enrollment-summary { min-height: 220px; }
+}
+
+/* Las tarjetas del equipo se abren al pasar el mouse para mostrar la descripcion. */
+.people { align-items: start; }
+.person {
+  position: relative;
+  overflow: hidden;
+  transform-origin: center;
+  transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+}
+.person:hover,
+.person:focus-within {
+  z-index: 2;
+  border-color: var(--blue-soft);
+  box-shadow: 0 14px 30px #00000099;
+  transform: translateY(-6px) scale(1.08);
+}
+.person-description {
+  max-height: 0;
+  margin: 0 12px;
+  overflow: hidden;
+  color: #b9c4d2;
+  font-size: 11px;
+  line-height: 1.55;
+  opacity: 0;
+  transition: max-height .35s ease, margin .35s ease, opacity .25s ease;
+}
+.person:hover .person-description,
+.person:focus-within .person-description {
+  max-height: 140px;
+  margin: 0 12px 14px;
+  opacity: 1;
+}
+
+.person > div img {
+  transition: none;
+}
+
+/* Bajamos el encuadre para que el contenido principal no quede pegado arriba. */
+.discipline-image img {
+  object-position: center 28%;
+}
+
+/* Se quita la leyenda de profesor a cargo de las tablas de horarios. */
+.schedule .teacher {
+  display: none;
+}
+
+@media (max-width: 680px) {
+  .person {
+    overflow: hidden;
+    transform: none;
+  }
+  .person-description {
+    position: static;
+    max-height: 140px;
+    margin: 0 12px 14px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    opacity: 1;
+  }
+}
+
+/* Ajuste responsive final: en celular el hero queda limpio y sin la foto principal. */
+@media (max-width: 680px) {
+  .hero,
+  .hero-grid {
+    min-height: auto;
+  }
+
+  .hero-grid {
+    display: block;
+  }
+
+  .hero-copy {
+    padding: 58px 0 52px;
+  }
+
+  .hero-person {
+    display: none;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+  }
+
+  .facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .facts span:nth-child(2) {
+    border-right: 0;
+  }
+
+  .facts span:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--line);
+  }
 }

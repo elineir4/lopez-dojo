@@ -2,6 +2,10 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import fotoHero from './assets/hero2-Photoroom.png'
 import logoDojo from './assets/WhatsApp Image 2026-09-27 at 19.25.21-Photoroom.png'
+import fotoJiuJitsu from './assets/jiujitsudojo.jpg'
+import fotoKarate from './assets/karateninos.jpg'
+import fotoKickboxing from './assets/kickdojo.jpg'
+import fotoMma from './assets/mmadojo.jpg'
 import fotoJulieta from './assets/julietadominguini.jpeg'
 import fotoPaula from './assets/paulycalderon.jpeg'
 import fotoSantiago from './assets/santiagozapata.jpeg'
@@ -20,7 +24,7 @@ const disciplinas = [
     titulo: 'JIU-JITSU BRASILEÑO (BJJ)',
     descripcion: 'Control posicional, sumisiones y combate en el suelo bajo los principios tradicionales de defensa personal y técnica pura.',
     pie: 'CON Y SIN GI · DEFENSA PERSONAL',
-    imagen: obtenerFoto('photo-1555597673-b21d5c935865'),
+    imagen: fotoJiuJitsu,
   },
   {
     numero: '02',
@@ -29,7 +33,7 @@ const disciplinas = [
     titulo: 'KARATE-DO TRADICIONAL',
     descripcion: 'Fundamentos, formas maestras y combate reglado. Disciplina mental, postura y potencia de impacto explosivo.',
     pie: 'GRADUACIÓN OFICIAL · FILOSOFÍA BUDŌ',
-    imagen: obtenerFoto('photo-1606335543042-57c525922933'),
+    imagen: fotoKarate,
   },
   {
     numero: '03',
@@ -38,7 +42,7 @@ const disciplinas = [
     titulo: 'KICKBOXING / BOXEO',
     descripcion: 'Trabajo técnico de golpeo, distancia, desplazamientos y acondicionamiento atlético combativo.',
     pie: 'FOCO EN POTENCIA Y RESISTENCIA',
-    imagen: obtenerFoto('photo-1549719386-74dfcbf7dbed'),
+    imagen: fotoKickboxing,
   },
   {
     numero: '04',
@@ -47,7 +51,7 @@ const disciplinas = [
     titulo: 'MMA (ARTES MARCIALES MIXTAS)',
     descripcion: 'Integración de striking, derribos, clinch y lucha cuerpo a cuerpo en suelo.',
     pie: 'NIVEL INTERMEDIO Y AVANZADO',
-    imagen: obtenerFoto('photo-1552074284-5e88ef1aef18'),
+    imagen: fotoMma,
   },
 ]
 
@@ -58,6 +62,7 @@ const docentes = [
     especialidad: 'Jiu-Jitsu Niños',
     etiqueta: 'ESPECIALIDAD INFANTIL',
     codigo: 'DOJO KIDS BJJ',
+    descripcion: 'Profesora de Jiu-Jitsu infantil. Desarrolla tecnica, confianza y disciplina con clases progresivas y cuidadas.',
     imagen: fotoJulieta,
   },
   {
@@ -65,6 +70,7 @@ const docentes = [
     especialidad: 'Karate Niños',
     etiqueta: 'ESPECIALIDAD INFANTIL',
     codigo: 'DOJO KIDS KARATE',
+    descripcion: 'Profesora de Karate infantil. Acompana el crecimiento de cada alumno con tecnica, respeto y seguridad.',
     imagen: fotoPaula,
   },
   {
@@ -72,6 +78,7 @@ const docentes = [
     especialidad: 'Kickboxing y Boxeo · Niños y Adultos',
     etiqueta: 'ESPECIALIDAD STRIKING',
     codigo: 'STRIKING & KIDS PROGRAM',
+    descripcion: 'Instructor de Kickboxing y Boxeo para ninos y adultos. Trabaja golpeo, condicion fisica y confianza.',
     imagen: fotoSantiago,
   },
 ]
@@ -484,6 +491,7 @@ function App() {
                   </div>
                   <h3>{docente.nombre}</h3>
                   <p>{docente.especialidad}</p>
+                  <p className="person-description">{docente.descripcion}</p>
                   <small>{docente.codigo}</small>
                 </article>
               ))}
