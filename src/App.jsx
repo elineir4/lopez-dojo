@@ -303,29 +303,18 @@ function App() {
         <section className="hero" id="inicio">
           <div className="container hero-grid">
             <div className="hero-copy">
-              <div className="micro">
-                <span>BIENVENIDO AL TATAMI</span>
-                <small><Icono nombre="ubicacion" /> VILLA ALLENDE, CÓRDOBA</small>
-              </div>
-              <h1><span className="nombre-dojo">LOPEZ</span> DOJO</h1>
+              <h1>
+                <span className="hero-title-main">LOPEZ</span>
+                <span className="hero-title-accent">DOJO.</span>
+              </h1>
               <p className="hero-text">
                 Artes marciales para todos los niveles. Entrená con disciplina, técnica y respeto.
               </p>
 
               <div className="hero-actions">
-                <a href={enlaceWhatsApp} className="button button--blue" target="_blank" rel="noreferrer">
-                  RESERVAR CLASE DE PRUEBA <small>(WHATSAPP)</small> <Icono nombre="externo" />
+                <a href="#contacto" className="button button--blue hero-contact">
+                  DÓNDE ENCONTRARNOS <Icono nombre="flecha" />
                 </a>
-                <a href="#horarios" className="button button--dark">
-                  VER HORARIOS <Icono nombre="flecha" />
-                </a>
-              </div>
-
-              <div className="facts">
-                <span><b>BJJ &amp; KARATE</b><small>LINAJE TRADICIONAL</small></span>
-                <span><b>KICK &amp; MMA</b><small>STRIKING &amp; JAULA</small></span>
-                <span><b>TODAS EDADES</b><small>INFANTILES Y ADULTOS</small></span>
-                <span><b>V. ALLENDE</b><small>CP 5105 · CÓRDOBA</small></span>
               </div>
             </div>
 
