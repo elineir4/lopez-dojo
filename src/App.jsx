@@ -12,7 +12,7 @@ import fotoSantiago from './assets/santiagozapata.jpeg'
 import fotoLeandro from './assets/leandrosensei2.jpeg'
 
 // Enlaces y funciones que usamos en distintas partes de la página.
-const enlaceWhatsApp = 'https://wa.me/5493513122622?text=Hola%20Lopez%20Dojo%2C%20quiero%20reservar%20una%20clase%20de%20prueba.'
+const enlaceWhatsApp = 'https://wa.me/543515290303?text=Hola%20Lopez%20Dojo%2C%20quiero%20reservar%20una%20clase%20de%20prueba.'
 const obtenerFoto = (id) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=1200&q=88`
 
 // Información de las disciplinas que ofrece el dojo.
@@ -70,15 +70,15 @@ const docentes = [
     especialidad: 'Karate Niños',
     etiqueta: 'ESPECIALIDAD INFANTIL',
     codigo: 'DOJO KIDS KARATE',
-    descripcion: 'Profesora de Karate infantil. Acompana el crecimiento de cada alumno con tecnica, respeto y seguridad.',
+    descripcion: 'Profesora de Karate infantil. Acompaña el crecimiento de cada alumno con tecnica, respeto y seguridad.',
     imagen: fotoPaula,
   },
   {
     nombre: 'SANTIAGO ZAPATA',
     especialidad: 'Kickboxing y Boxeo · Niños y Adultos',
-    etiqueta: 'ESPECIALIDAD STRIKING',
+    etiqueta: 'ESPECIALIDAD AMBOS',
     codigo: 'STRIKING & KIDS PROGRAM',
-    descripcion: 'Instructor de Kickboxing y Boxeo para ninos y adultos. Trabaja golpeo, condicion fisica y confianza.',
+    descripcion: 'Instructor de Kickboxing y Boxeo para niños y adultos. Trabaja golpeo, condicion fisica y confianza.',
     imagen: fotoSantiago,
   },
 ]
@@ -274,7 +274,6 @@ function App() {
         <div className="container header-inner">
           <a href="#inicio" className="brand">
             {logoDojo ? <img className="logo-dojo" src={logoDojo} alt="Lopez Dojo" /> : <Marca />}
-            <span><b>LOPEZ</b><small>DOJO</small></span>
           </a>
 
           <nav className={menuAbierto ? 'nav nav--open' : 'nav'}>
@@ -308,7 +307,7 @@ function App() {
                 <span className="hero-title-accent">DOJO.</span>
               </h1>
               <p className="hero-text">
-                Artes marciales para todos los niveles. Entrená con disciplina, técnica y respeto.
+                Escuela de artes marciales para todos los niveles. Entrená con disciplina, técnica y respeto.
               </p>
 
               <div className="hero-actions">
@@ -585,7 +584,7 @@ function App() {
                   <h3>AV. GOYCOECHEA 249</h3>
                   <p>Lopez Dojo · Villa Allende<br />Villa Allende, Córdoba, Argentina (CP 5105)</p>
                   <div>
-                    <span><Icono nombre="telefono" /> +54 9 351 312 2622</span>
+                    <span><Icono nombre="telefono" /> 54 351 5290303</span>
                     <a href={enlaceWhatsApp} target="_blank" rel="noreferrer">ESCRIBIR AL WHATSAPP</a>
                   </div>
                 </article>
@@ -623,7 +622,7 @@ function App() {
             <a href={enlaceWhatsApp} className="button button--blue" target="_blank" rel="noreferrer">
               RESERVÁ TU CLASE DE PRUEBA SIN CARGO <Icono nombre="externo" />
             </a>
-            <small>AV. GOYCOECHEA 249 · VILLA ALLENDE, CÓRDOBA · WHATSAPP +54 9 351 312 2622</small>
+            <small>AV. GOYCOECHEA 249 · VILLA ALLENDE, CÓRDOBA · WHATSAPP 54 351 5290303</small>
           </div>
         </section>
       </main>
@@ -632,7 +631,6 @@ function App() {
         <div className="container">
           <a href="#inicio" className="brand">
             {logoDojo ? <img className="logo-dojo" src={logoDojo} alt="Lopez Dojo" /> : <Marca />}
-            <span><b>LOPEZ</b><small>DOJO</small></span>
           </a>
           <span>FORMACIÓN MARCIAL OFICIAL</span>
           <a href="https://www.instagram.com/lopezdojo/" target="_blank" rel="noreferrer">
